@@ -20,9 +20,13 @@ const Login = () => {
       <Box bgcolor='white' p={2} borderRadius='1.5rem'>
         <Typography
           textAlign='center'
-          fontWeight='700'
+          fontWeight='900'
           textTransform='uppercase'
-          paddingTop={4}>
+          paddingTop={4}
+          color='#a7bcff'>
+          Chatify
+        </Typography>
+        <Typography textAlign='center' fontSize='0.8rem' marginTop={1}>
           Login Form
         </Typography>
         <form>
@@ -41,13 +45,25 @@ const Login = () => {
               fullWidth
               variant='contained'
               aria-label='outlined primary button group'>
-              <Button>Submit</Button>
-              <Button sx={{ width: "20%" }}>
+              <Button
+                sx={{
+                  backgroundColor: "#6676ab",
+                  color: "white",
+                  fontWeight: "800",
+                }}>
+                Login
+              </Button>
+              <Button
+                sx={{
+                  width: "20%",
+                  backgroundColor: "#6676ab",
+                  color: "white",
+                }}>
                 <LoginIcon />
               </Button>
             </ButtonGroup>
             <Typography variant='h6' fontSize='0.8rem'>
-              New Here
+              New Here{" "}
               <Link to='/register' color='primary'>
                 Register
               </Link>
