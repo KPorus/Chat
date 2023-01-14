@@ -1,6 +1,7 @@
 import { Box, Button, ButtonGroup, InputBase, Stack, TextField, Typography } from '@mui/material';
 import React from 'react';
 import { Link } from 'react-router-dom';
+import img from "../assets/image-files.png"
 
 const Register = () => {
     return (
@@ -9,7 +10,7 @@ const Register = () => {
         justifyContent='center'
         position='sticky'
         top={"calc(50% - 20rem)"}>
-        <Box bgcolor='white' p={2} borderRadius='1.5rem' marginTop={4}>
+        <Box bgcolor='white' p={2} borderRadius='1.5rem' marginTop={4} sx={{width:{sm:"20rem", xs:"30rem"}}}>
           <Typography
             textAlign='center'
             fontWeight='900'
@@ -38,7 +39,17 @@ const Register = () => {
                 id='demo-helper-text-misaligned'
                 label='PassWord'
               />
-              <InputBase type='file' sx={{ cursor: "pointer" }}></InputBase>
+              <InputBase
+                type='file'
+                id='file'
+                sx={{ cursor: "pointer", display: "none" }}></InputBase>
+              <label htmlFor='file' style={{display:"flex", alignItems:"center", gap:"0.6rem"}}>
+                <img
+                  src={img}
+                  style={{ width:"12%"}}
+                  alt='file'></img>
+                <small style={{color:"gray"}}>Add a avater</small>
+              </label>
               <ButtonGroup
                 fullWidth
                 variant='contained'
